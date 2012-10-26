@@ -13,6 +13,12 @@ system/etc/audio/Tx_ControlParams_WIRED_HEADSET_WIDEBAND.txt
 system/lib/hw/alsa.default.so 
 system/lib/hw/audio.primary.exynos4.so 
 system/lib/hw/audio_policy.exynos4.so 
+system/lib/libaudiopolicy_sec.so
+system/lib/lib_SamsungRec_V01006.so
+system/lib/lib_Samsung_SB_AM_for_ICS_v03005.so
+system/lib/libcontrolcsc.so
+system/lib/libsamsungRecord.so
+system/lib/libsamsungSoundbooster.so
 system/lib/lib_Samsung_Acoustic_Module_Llite.so 
 system/lib/lib_Samsung_Resampler.so 
 system/lib/lib_Samsung_Sound_Booster.so 
