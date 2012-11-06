@@ -18,6 +18,8 @@
     <string name="touchscreen_subcat_title">Touchscreen</string>
     <string name="touchscreen_sensitivity_title_head">Empfindlichkeit</string>
     <string name="touchscreen_sensitivity_summary_head">Berührungs-Empfindlichkeit</string>
+    <string name="touchscreen_slide2wake_title_head">Slide 2 Wake</string>
+    <string name="touchscreen_slide2wake_summary_head">Von links nach rechts wischen, um Gerät zu wecken.</string>
 
     <string name="touchkey_subcat_title">Touchkeys</string>
     <string name="touchkey_light_title_head">Beleuchtung</string>

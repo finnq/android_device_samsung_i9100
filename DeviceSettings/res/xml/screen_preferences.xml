@@ -60,6 +60,13 @@
                 android:entries="@array/touchscreen_sensitivity_entries"
                 android:entryValues="@array/touchscreen_sensitivity_entries_values"
                 android:defaultValue="50" />
+    <!-- Slide 2 wake -->
+    <CheckBoxPreference
+                android:key="touchscreen_slide2wake"
+                android:title="@string/touchscreen_slide2wake_title_head"
+                android:summary="@string/touchscreen_slide2wake_summary_head"
+                android:defaultValue="false"
+                />
     </PreferenceCategory>
 
     <PreferenceCategory

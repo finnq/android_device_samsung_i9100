@@ -18,6 +18,8 @@
     <string name="touchscreen_subcat_title">Touchscreen</string>
     <string name="touchscreen_sensitivity_title_head">Touch sensitivity</string>
     <string name="touchscreen_sensitivity_summary_head">Set touch panel sensitivity</string>
+    <string name="touchscreen_slide2wake_title_head">Slide 2 wake</string>
+    <string name="touchscreen_slide2wake_summary_head">Wipe from left to right to wake the device.</string>
 
     <string name="touchkey_subcat_title">Touchkeys</string>
     <string name="touchkey_light_title_head">Enable keys backlight</string>

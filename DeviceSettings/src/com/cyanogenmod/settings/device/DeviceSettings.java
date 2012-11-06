@@ -44,6 +44,7 @@ public class DeviceSettings extends FragmentActivity {
     public static final String KEY_USE_ACCELEROMETER_CALIBRATION = "use_accelerometer_calibration";
     public static final String KEY_CALIBRATE_ACCELEROMETER = "calibrate_accelerometer";
     public static final String KEY_TOUCHSCREEN_SENSITIVITY = "touchscreen_sensitivity";
+    public static final String KEY_TOUCHSCREEN_SLIDE2WAKE = "touchscreen_slide2wake";
     public static final String KEY_TOUCHKEY_LIGHT = "touchkey_light";
     public static final String KEY_TOUCHKEY_TIMEOUT = "touchkey_timeout";
     public static final String KEY_VIBRATOR_INTENSITY = "vibrator_intensity";
