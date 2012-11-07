@@ -86,9 +86,9 @@ public class ScreenFragmentActivity extends PreferenceFragment {
 
         if (key.compareTo(DeviceSettings.KEY_TOUCHSCREEN_SLIDE2WAKE) == 0) {
             if (((CheckBoxPreference)preference).isChecked()) {
-                Utils.writeValue(FILE_TOUCHSCREEN_SLIDE2WAKE, "0");
-            } else {
                 Utils.writeValue(FILE_TOUCHSCREEN_SLIDE2WAKE, "1");
+            } else {
+                Utils.writeValue(FILE_TOUCHSCREEN_SLIDE2WAKE, "0");
             }
         }
 
@@ -116,7 +116,7 @@ public class ScreenFragmentActivity extends PreferenceFragment {
         boolean slide2wake = sharedPrefs.getBoolean(DeviceSettings.KEY_TOUCHSCREEN_SLIDE2WAKE, false);
         boolean light = sharedPrefs.getBoolean(DeviceSettings.KEY_TOUCHKEY_LIGHT, true);
 
-        Utils.writeValue(FILE_TOUCHSCREEN_SLIDE2WAKE, slide2wake ? "0" : "1");
+        Utils.writeValue(FILE_TOUCHSCREEN_SLIDE2WAKE, slide2wake ? "1" : "0");
 
         Utils.writeValue(FILE_TOUCHKEY_DISABLE, light ? "0" : "1");
         Utils.writeValue(FILE_TOUCHKEY_BRIGHTNESS, light ? "1" : "2");
