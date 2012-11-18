@@ -34,6 +34,7 @@ public class ScreenFragmentActivity extends PreferenceFragment {
     private static final String PREF_ENABLED = "1";
     private static final String TAG = "GalaxyS2Settings_Screen";
 
+    private static final String FILE_TOUCHSCREEN_SLIDE2WAKE = "/sys/devices/virtual/sec/sec_touchscreen/tsp_slide2wake";
     private static final String FILE_TOUCHKEY_DISABLE = "/sys/class/sec/sec_touchkey/force_disable";
     private static final String FILE_TOUCHKEY_BRIGHTNESS = "/sys/class/sec/sec_touchkey/brightness";
 
@@ -83,6 +84,14 @@ public class ScreenFragmentActivity extends PreferenceFragment {
 
         Log.w(TAG, "key: " + key);
 
+        if (key.compareTo(DeviceSettings.KEY_TOUCHSCREEN_SLIDE2WAKE) == 0) {
+            if (((CheckBoxPreference)preference).isChecked()) {
+                Utils.writeValue(FILE_TOUCHSCREEN_SLIDE2WAKE, "1");
+            } else {
+                Utils.writeValue(FILE_TOUCHSCREEN_SLIDE2WAKE, "0");
+            }
+        }
+
         if (key.compareTo(DeviceSettings.KEY_TOUCHKEY_LIGHT) == 0) {
             if (((CheckBoxPreference)preference).isChecked()) {
                 Utils.writeValue(FILE_TOUCHKEY_DISABLE, "0");
@@ -104,7 +113,10 @@ public class ScreenFragmentActivity extends PreferenceFragment {
 
     public static void restore(Context context) {
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
+        boolean slide2wake = sharedPrefs.getBoolean(DeviceSettings.KEY_TOUCHSCREEN_SLIDE2WAKE, false);
         boolean light = sharedPrefs.getBoolean(DeviceSettings.KEY_TOUCHKEY_LIGHT, true);
+
+        Utils.writeValue(FILE_TOUCHSCREEN_SLIDE2WAKE, slide2wake ? "1" : "0");
 
         Utils.writeValue(FILE_TOUCHKEY_DISABLE, light ? "0" : "1");
         Utils.writeValue(FILE_TOUCHKEY_BRIGHTNESS, light ? "1" : "2");
